@@ -1,0 +1,26 @@
+{
+  "name": "Veridex Creator Platform",
+  "description": "Proof layer for content and AI - Cryptographic proof of authenticity",
+  "framework": "next",
+  "buildCommand": "npm run build",
+  "startCommand": "npm start",
+  "env": {
+    "NODE_ENV": "production",
+    "NEXT_PUBLIC_APP_URL": "https://creators.eyespai.com",
+    "NEXT_PUBLIC_MAIN_SITE_URL": "https://eyespai.com"
+  },
+  "subdomain": "creators",
+  "domain": "eyespai.com",
+  "regions": ["us-east-1", "eu-west-1"],
+  "scaling": {
+    "minInstances": 2,
+    "maxInstances": 10,
+    "cpuThreshold": 70,
+    "memoryThreshold": 80
+  },
+  "monitoring": {
+    "enabled": true,
+    "alertEmail": "ops@eyespai.com",
+    "logLevel": "info"
+  }
+}
